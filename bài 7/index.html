@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Input a:")
+    let b = +prompt("Input b:")
+    let c = +prompt("Input c:")
+    let p = b*b-4*a*c
+
+    if (p < 0) {
+        document.write("Phương trình vô nghiệm")
+    } else if(p == 0) {
+        document.write("Phương trình có nghiệm kép " + (-b/(2*a)))
+    } else {
+        if(a+b+c==0) {
+            document.write("phương trình có 2 nghiệm " + "x1=1 " + "x2= " + (c/a))
+        } if(a-b+c==0) {
+            document.write("phương trình có 2 nghiệm: "+"x1=-1" + "x2= " + (-c/a))
+        } else {
+            let x1 = ((-b + Math.sqrt(p))/2*a)
+            let x2 = ((-b - Math.sqrt(p))/2*a)
+            document.write("Phương trình có 2 nghiệm: " + "x1=" + x1 + " x2=" + x2)
+        }
+    }
+</script>
+</body>
+</html>
